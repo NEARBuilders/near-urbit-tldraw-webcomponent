@@ -13,6 +13,7 @@ import {
   RouterProvider,
   useLocation,
 } from "react-router-dom";
+import TldrawCanvas from "./components/tldraw/Canvas";
 
 function Viewer({ widgetSrc, code, initialProps }) {
   const location = useLocation();
@@ -65,6 +66,9 @@ function App(props) {
             props.to = sanitizeUrl(props.to);
           }
           return <Link {...props} />;
+        },
+        Canvas: (props) => {
+          return <TldrawCanvas {...props} />;
         },
       },
       features: {
