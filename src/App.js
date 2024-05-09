@@ -13,6 +13,7 @@ import {
   RouterProvider,
   useLocation,
 } from "react-router-dom";
+import TldrawCanvas from "./components/tldraw/Canvas";
 
 const SESSION_STORAGE_REDIRECT_MAP_KEY = "nearSocialVMredirectMap";
 
@@ -92,6 +93,9 @@ function App(props) {
               props.to = sanitizeUrl(props.to);
             }
             return <Link {...props} />;
+          },
+          Canvas: (props) => {
+            return <TldrawCanvas {...props} />;
           },
         },
         features: {
