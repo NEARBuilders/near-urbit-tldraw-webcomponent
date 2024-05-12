@@ -93,7 +93,6 @@ function App(props) {
         <Viewer widgetSrc={src} code={code} initialProps={initialProps} />
       ),
     },
-    //{ path: "/*", element: <Viewer /> },
   ]);
 
   return <RouterProvider router={router} />;
