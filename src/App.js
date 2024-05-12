@@ -118,7 +118,6 @@ function App(props) {
         />
       ),
     },
-    //{ path: "/*", element: <Viewer /> },
   ]);
 
   return <RouterProvider router={router} />;
