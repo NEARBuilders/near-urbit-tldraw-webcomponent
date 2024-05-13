@@ -1,49 +1,24 @@
-# NEAR BOS Web Component ( custom element )
+# near-urbit-tldraw
 
-This is a Proof of Concept of embedding a NEAR BOS widget into any web application as a Web Component / Custom element.
+—> [near-bos-webcomponent](https://github.com/nearbuilders/near-bos-webcomponent) with [tldraw](https://github.com/tldraw/tldraw) installed and a custom [Urbit NearSocial/VM](https://github.com/urbit/NearSocialVM), in order to provide a sandbox for builders wanting to create decentralized Urbit apps.
 
-Just load react production react bundles into your index.html as shown below, and use the `near-social-viewer` custom element to embed the BOS widget.
+## Getting started
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Near social</title>
-    <script defer="defer" src="/runtime.REPLACE_WITH_BUNDLE_HASH.bundle.js"></script>
-    <script defer="defer" src="/main.REPLACE_WITH_BUNDLE_HASH.bundle.js"></script></head>
-  <body>
-    <h1>NEAR BOS embeddable custom element</h1>
-    <near-social-viewer></near-social-viewer>
-  </body>
-</html>
-```
+To run locally, install packages:
 
-
-## Setup & Development
-
-Initialize repo:
-```
+```bash
 yarn
 ```
 
-Start development version:
-```
-yarn start
+Then, run the command:
+
+```bash
+yarn run dev
 ```
 
-Production build:
+This will serve the widgets from `http://127.0.0.1:8080/` and start a local gateway.
 
-```
-yarn prod
-```
-
-Serve the production build:
-
-```
-yarn serve prod
-```
+Also, don't forget to add API key in `.env`.
 
 # Running Playwright tests
 
