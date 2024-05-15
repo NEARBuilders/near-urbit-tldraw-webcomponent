@@ -7,6 +7,12 @@ test("Verify default route loads successfully and displays expected content", as
   // Navigate to the default route
   await page.goto("/");
 
+  await page.evaluate(() => {
+    document.body.innerHTML = `
+    <near-social-viewer src="devs.near/widget/default" initialprops='{"message": "hello world!"}'></near-social-viewer>
+    `;
+  });
+
   // Verify the viewer's default route
   await waitForSelectorToBeVisible(
     page,

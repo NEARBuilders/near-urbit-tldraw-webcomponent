@@ -1,10 +1,10 @@
 {
-  "name": "near-bos-webcomponent",
-  "version": "0.0.7",
-  "homepage": "https://github.com/petersalomonsen/near-bos-webcomponent",
+  "name": "near-urbit-tldraw-webcomponent",
+  "version": "0.0.1",
+  "homepage": "https://github.com/NEARBuilders/near-urbit-tldraw-webcomponent",
   "repository": {
     "type": "git",
-    "url": "https://github.com/petersalomonsen/near-bos-webcomponent.git"
+    "url": "https://github.com/NEARBuilders/near-urbit-tldraw-webcomponent.git"
   },
   "files": [
     "dist/",
@@ -40,12 +40,12 @@
     "webpack": "webpack",
     "bw": "bos-workspace",
     "dev": "concurrently \"yarn run dev:gateway\" \"wait-on dist/index.html && yarn run dev:apps\"",
-    "dev:apps": "yarn run bw dev -g ./dist",
+    "dev:apps": "yarn run bw dev -p 8081 -g ./dist",
     "dev:gateway": "yarn run webpack --env mode=development --watch",
     "prod": "yarn run webpack --env mode=production",
     "prod:analyze": "yarn run prod --env presets=analyze",
     "build": "yarn run prod",
-    "start": "yarn run dev && http-server -p 8081 dist --allowed-hosts=all",
+    "start": "yarn run dev:gateway && http-server -p 8081 dist --allowed-hosts=all",
     "serve:prod": "http-server -p 3000 dist",
     "generateimportmap": "(cd public && jspm link index.html -o index.html)",
     "web4:deploy": "NEAR_ENV=mainnet npx web4-deploy dist psalomobos.near --nearfs",
