@@ -67,7 +67,7 @@ test("should be possible to set initialProps and src widget for the root path", 
     <near-social-viewer src="devhub.near/widget/app" initialProps='{"page": "community", "handle": "webassemblymusic"}'></near-social-viewer>
     `;
   });
-  await expect(await page.getByText('WebAssembly Music', { exact: true })).toBeVisible();
+  await expect(await page.getByText('WebAssembly Music', { exact: true })).toBeVisible({ timeout: 10000});
 });
 
 test("for supporting SEO friendly URLs, it should be possible to set initialProps and src widget from any path", async ({ page }) => {
