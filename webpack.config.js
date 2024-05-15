@@ -1,14 +1,12 @@
 const webpack = require("webpack");
 const paths = require("./config/paths");
 const path = require("path");
-const ManifestPlugin = require("webpack-manifest-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { merge } = require("webpack-merge");
 const loadPreset = require("./config/presets/loadPreset");
 const loadConfig = (mode) => require(`./config/webpack.${mode}.js`)(mode);
-const fs = require("fs");
 
 module.exports = function (env) {
   const { mode = "production" } = env || {};

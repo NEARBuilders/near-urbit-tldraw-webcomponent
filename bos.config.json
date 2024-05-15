@@ -1,3 +1,4 @@
 {
-  "account": "account.Urbit"
+  "account": "urbit.near",
+  "index": "urbit.near/widget/Index"
 }

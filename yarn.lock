@@ -4919,9 +4919,9 @@ bos-cli@^0.3.13:
     detect-libc "^2.0.0"
 
 bos-workspace@^1.0.0-alpha.16:
-  version "1.0.0-alpha.16"
-  resolved "https://registry.yarnpkg.com/bos-workspace/-/bos-workspace-1.0.0-alpha.16.tgz#152b673520fd750033a96f2d209dbcfc63627eb8"
-  integrity sha512-YXZMBGQSQyYoQHNYp17gMw00aB5YCIbm0cNcG9sjnVqXr/3/q0dytFF8XsH6v+uC1Akqu3YaZ+/+upHaqNlpYQ==
+  version "1.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/bos-workspace/-/bos-workspace-1.0.0-alpha.18.tgz#808528a972c39830e1d1fe5a29f6db492d3398ba"
+  integrity sha512-UcBFdYDoOV0UNnKOPKCD3dMnOc4it3XtJz4jYQVltKU2pnThnkMePlSHFL9wyP1daO1x6X3Rwowc64v8DtgOwg==
   dependencies:
     "@near-js/providers" "^0.2.1"
     "@near-js/types" "^0.2.0"

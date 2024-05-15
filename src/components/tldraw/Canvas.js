@@ -6,8 +6,6 @@ import { ResponseShapeUtil } from "./ResponseShape";
 import SharePanel from "./SharePanel";
 import { TldrawLogo } from "./TldrawLogo";
 import TopZone from "./TopZone";
-import { ZoomIn } from "./ZoomUI";
-import { Templates } from "./Templates";
 
 const shapeUtils = [ResponseShapeUtil];
 
@@ -124,9 +122,7 @@ function TldrawCanvas({
         })}
       >
         <TldrawLogo />
-        <ZoomIn />
-        <Templates />
-        <UrlStateSync />
+        {/* <UrlStateSync /> */}
       </Tldraw>
     </div>
   );
