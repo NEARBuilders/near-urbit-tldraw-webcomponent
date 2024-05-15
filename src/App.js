@@ -14,10 +14,12 @@ import {
   useLocation,
 } from "react-router-dom";
 import TldrawCanvas from "./components/tldraw/Canvas";
+import useRedirectMap from "./useRedirectMap";
 
 function Viewer({ widgetSrc, code, initialProps }) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
+  const { components: redirectMap } = useRedirectMap();
 
   // create props from params
   const passProps = useMemo(() => {
@@ -40,6 +42,9 @@ function Viewer({ widgetSrc, code, initialProps }) {
         src={!code && src}
         code={code} // prioritize code
         props={{ ...initialProps, ...passProps }}
+        config={{
+          redirectMap,
+        }}
       />
     </>
   );
