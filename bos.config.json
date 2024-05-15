@@ -1,11 +1,3 @@
 {
-  "account": "devs.near",
-  "web4": {
-    "index": {
-      "src": "devs.near/widget/default",
-      "initialProps": {
-        "message": "hello world!"
-      }
-    }
-  }
+  "account": "account.Urbit"
 }
