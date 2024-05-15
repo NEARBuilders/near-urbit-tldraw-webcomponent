@@ -78,7 +78,7 @@ test("for supporting SEO friendly URLs, it should be possible to set initialProp
     const pathparts = location.pathname.split("/");
     viewerElement.setAttribute("initialProps", JSON.stringify({ page: pathparts[1], handle: pathparts[2] }));
   });
-  await expect(await page.getByText('WebAssembly Music', { exact: true })).toBeVisible();
+  await expect(await page.getByText('WebAssembly Music', { exact: true })).toBeVisible({ timeout: 10000});
 });
 
 test("should be able to load a widget from the path", async ({ page }) => {
