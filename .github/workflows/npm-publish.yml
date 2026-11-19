@@ -9,6 +9,7 @@ on:
 
 jobs:
   publish-gpr:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     permissions:
       contents: read
