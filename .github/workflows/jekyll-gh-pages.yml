@@ -24,6 +24,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,6 +45,7 @@ jobs:
 
   # Deployment job
   deploy:
+    timeout-minutes: 60
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
